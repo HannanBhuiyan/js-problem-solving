@@ -5,5 +5,16 @@
 let weekday  = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
 const d = new Date();
 let day = weekday[d.getDay()];
+console.log(`Today is : ${day}.`)
 
-console.log(d.getTime())
+let hour = d.getHours()
+let minute = d.getMinutes()
+let second = d.getSeconds()
+
+if(hour > 12){
+     hour = hour + ' PM';
+}
+else {
+     hour = hour + ' AM';
+}
+console.log(`Current Time : ${hour} : ${minute} : ${second}`)
